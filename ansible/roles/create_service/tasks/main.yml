@@ -1,4 +1,10 @@
 - name: Create a service using template
-  ansible.builtin.template:
-    src: fibonacci.service
+  template:
+    src: fibonacci.service.j2
     dest: /etc/systemd/system/fibonacci.service
+
+- name: Start service fibonacci
+  ansible.builtin.service:
+    name: fibonacci
+    state: started
+    enabled: yes
