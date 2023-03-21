@@ -1,0 +1,9 @@
+- name: Création group "fibonacci" 
+  ansible.builtin.group:
+    name: fibonacci
+    state: present
+
+- name: Added a consultant whose account you want to expire
+  ansible.builtin.user:
+    name: fibonacci
+    groups: fibonacci

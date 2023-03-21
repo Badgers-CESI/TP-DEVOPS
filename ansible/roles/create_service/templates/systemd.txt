@@ -1,0 +1,5 @@
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/libexec/iptables.init start
+ExecStop=/usr/libexec/iptables.init stop

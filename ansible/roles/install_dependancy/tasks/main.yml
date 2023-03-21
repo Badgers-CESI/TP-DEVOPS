@@ -1,0 +1,6 @@
+---
+- name: install dependancy
+    ansible.builtin.apt:
+    name:
+      - nodejs
+      - npm

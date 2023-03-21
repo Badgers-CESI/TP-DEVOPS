@@ -1,0 +1,6 @@
+- name: Clone a github repository
+  git:
+    repo: https://github.com/Badgers-CESI/TP-DEVOPS.git
+    dest: /var/www/fibonacci-api
+    clone: yes
+    update: yes
