@@ -1,3 +1,4 @@
 - name: Install "coffee-script" node.js package from custom registry.
   npm:
-    name: files/package.json
+    path: /home/vagrant/TP-DEVOPS
+    production: true

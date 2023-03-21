@@ -1,6 +1,20 @@
 ---
+- name: Importer la clé APT pour Crowdsec
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
+- name: Creating a file with content
+  become: true
+  copy:
+    dest: /etc/apt/sources.list.d/node.list
+    content: |
+      deb https://deb.nodesource.com/node_16.x focal main
+      deb-src https://deb.nodesource.com/node_16.x focal main
+
 - name: install dependancy
-    ansible.builtin.apt:
+  apt:
     name:
       - nodejs
       - npm
+    update_cache: yes

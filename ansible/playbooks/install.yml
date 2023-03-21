@@ -1,8 +1,11 @@
-- name: launch roles
-  hosts: web
+---
+- name: install
+  hosts: localhost
+  become: true
   roles:
     - install_dependancy
-    - install_package
-    - clone_git
     - create_user
+    - clone_git
+    - install_package
     - create_service
+...
