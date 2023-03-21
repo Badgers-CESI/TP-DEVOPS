@@ -1,0 +1,8 @@
+- name: launch roles
+  hosts: web
+  roles:
+    - install_dependancy
+    - install_package
+    - clone_git
+    - create_user
+    - create_service
